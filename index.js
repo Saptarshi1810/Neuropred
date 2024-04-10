@@ -84,8 +84,8 @@ app.post("/tapping", async (req, res) => {
   }
 });
 
-app.get("/tapping", async (req, res) => {
-  const patientId = req.body.patient_id;
+app.get("/tapping/:patientId", async (req, res) => {
+  const patientId = req.params.patientId;
 
   try {
       const result = await collection.findOne({ patient_id: patientId });
