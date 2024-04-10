@@ -84,7 +84,7 @@ app.post("/tapping", async (req, res) => {
   }
 });
 
-app.get("/tapping/patientId", async (req, res) => {
+app.get("/tapping/:patientId", async (req, res) => {
   const patientId = req.params.patientId;
 
   try {
